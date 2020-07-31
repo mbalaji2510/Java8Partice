@@ -1,0 +1,8 @@
+###
+Student Score ::
+select id,name from student where score> (select round(avg(distinct score),2) from student) order by id asc;
+exit;
+
+#### Customer Table####
+
+select id,first_name,last_name from Customer where length(first_name || last_name)<12 order by id desc;
